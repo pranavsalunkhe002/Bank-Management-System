@@ -1,0 +1,131 @@
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "fullName": "PRANAV Salunkhe",
+  "email": "PRANAV02@gmail.com",
+  "phone": "8468857665",
+  "password": "pranav02",
+  "role": "ADMIN"
+}
+### LOGIN USER --
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "pooja@gmail.com",
+  "password": "pooja"
+}
+### CREATE ACCOUNT --
+
+POST http://localhost:8080/api/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb2hhbUBnbWFpbC5jb20iLCJpYXQiOjE3ODE3MjEwOTYsImV4cCI6MTc4MTcyNDY5Nn0.-DdjgVVZVFcbMZFdeYDOf4Fv7GPq9fCbp9QJ91EIf6Y
+Content-Type: application/json
+
+{
+  "userId": 12,
+  "accountType": "SAVINGS",
+  "initialDeposit": 50000
+}
+### VIEW ACCOUNT
+
+GET http://localhost:8080/api/accounts/ACC1781721181721
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb2hhbUBnbWFpbC5jb20iLCJpYXQiOjE3ODE3MjE3MDUsImV4cCI6MTc4MTcyNTMwNX0.byH-SOuZFeM5pMO4oUYEhTrv6D6QDAkiERJ_xc1HwtA
+
+### DEPOSIT MONEY --
+
+POST http://localhost:8080/api/accounts/deposit
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb2hhbUBnbWFpbC5jb20iLCJpYXQiOjE3ODE3MjIwMjAsImV4cCI6MTc4MTcyNTYyMH0.vrFBWj4hL_0FKYeZxb7QlyvluWXUQsrOXAlqTnlwut8
+Content-Type: application/json
+
+{
+  "accountNumber": "ACC1781716581149",
+  "amount": 200000
+}
+
+### WITHDRAW MONEY --
+
+POST http://localhost:8080/api/accounts/withdraw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwb29qYUBnbWFpbC5jb20iLCJpYXQiOjE3ODE3MjQxMzUsImV4cCI6MTc4MTcyNzczNX0.-rVtZxeWR5mLQbLFp_sm-Z9T7DLwGMYrcOGesn0UFfM
+Content-Type: application/json
+
+{
+  "accountNumber": "ACC1781716581149",
+  "amount": 900000
+}
+
+### TRANSFER MONEY
+
+POST http://localhost:8080/api/accounts/transfer
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwb29qYUBnbWFpbC5jb20iLCJpYXQiOjE3ODIyNDA4NDgsImV4cCI6MTc4MjI0NDQ0OH0.GKn6qnQC6gUucZIcikOx0zDKV7Fwa7TGtQpyM3Rc9E8
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC1781716581149",
+  "toAccount": "ACC1781275278954",
+  "amount": 2000000
+}
+
+### transcations
+
+GET http://localhost:8080/api/transactions/ACC1781716581149
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwb29qYUBnbWFpbC5jb20iLCJpYXQiOjE3ODE4MDExNTIsImV4cCI6MTc4MTgwNDc1Mn0.DSs9igxxO1hIUQRlNf1_guwiGgCyd6ehAtcoIaZoa7k
+
+###
+POST http://localhost:8080/api/accounts/deposit
+Content-Type: application/json
+
+{
+    "accountNumber": "ACC1781721181721",
+    "amount": 500
+}
+
+###
+PUT http://localhost:8080/api/accounts/freeze/ACC1781721181721
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb2hhbUBnbWFpbC5jb20iLCJpYXQiOjE3ODE3MjIyODcsImV4cCI6MTc4MTcyNTg4N30.pt5l6qyycFUxWu_FZIn3ZlGV6Bshu5DOZHMEpCFXxOc
+
+###
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "fullName": "Pooja Salunkhe",
+  "email": "pooja@gmail.com",
+  "phone": "9876502122",
+  "password": "pooja",
+  "role": "CUSTOMER"
+}
+###
+
+GET http://localhost:8080/api/accounts/ACC1781716581149
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcmFuYXYwMDNAZ21haWwuY29tIiwiaWF0IjoxNzgxNzA1MjY5LCJleHAiOjE3ODE3MDg4Njl9.jZaLfg0qzVk9SFG3qpE9OGWdx7D7WWGfFvaI6z3RgkE
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "pooja@gmail.com",
+  "password": "pooja"
+}
+
+###
+GET http://localhost:8080/api/accounts/ACC1781721181721
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb2hhbUBnbWFpbC5jb20iLCJpYXQiOjE3ODE3MjI3NTUsImV4cCI6MTc4MTcyNjM1NX0.SDOcBlPHPZqDr0A-oEjuEbPnO23wr9NOb-RxB2-3wVw
+
+###
+PUT http://localhost:8080/api/accounts/freeze/ACC1781721181721
+
+###
+GET http://localhost:8080/api/accounts/my-account
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwb29qYUBnbWFpbC5jb20iLCJpYXQiOjE3ODIyNDM0NjAsImV4cCI6MTc4MjI0NzA2MH0._yJ26uOF3q_xrLXqTixUTTqUQ1J-2-UPqeEb2VyV8Oc
+###
+POST http://localhost:8080/api/users/change-password
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwb29qYUBnbWFpbC5jb20iLCJpYXQiOjE3ODI0OTE0MzMsImV4cCI6MTc4MjQ5NTAzM30.6DhWgMuDhIQby3r0ZI7YzMOWpFj4yhLxtcPyiM2Gce4
+Content-Type: application/json
+
+{
+  "currentPassword": "pooja",
+  "newPassword": "pranav"
+}
