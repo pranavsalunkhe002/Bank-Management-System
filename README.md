@@ -1,5 +1,5 @@
 ﻿# Bank-Management-System
-# 🏦 Online Banking System
+
 
 A secure and modern **Full Stack Online Banking System** developed using **Spring Boot**, **React**, **MySQL**, and **JWT Authentication**. The application provides separate customer and admin functionalities with secure role-based access, making it suitable for learning enterprise Java development and showcasing full-stack development skills.
 
